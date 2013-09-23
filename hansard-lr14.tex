@@ -1,0 +1,112 @@
+% LREC Document Attrition paper, based on ACL2005 example TeX
+
+
+\documentclass[10pt, a4paper]{article}
+% =============================================================================
+% Package inclusions
+\usepackage{lrec2006}
+\usepackage{times}
+\usepackage{graphicx}
+
+\usepackage[textsize=tiny]{todonotes}
+% \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+%\usepackage[margin=1in]{geometry}
+%\usepackage[section]{placeins}
+% =============================================================================
+% Custom commands
+%\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\newcommand{\mon}[1]{{\tt #1}}
+
+% =============================================================================
+% Package config
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+% =============================================================================
+% Title and header content; metadata
+\title{Experiences with Parallelisation of CLAWS: }
+
+
+\name{Stephen Wattam\superscript{\small{1}}, 
+Paul Rayson\superscript{\small{1}}}
+
+
+\address{	School of Computing and Communications\superscript{\small{1}} \\
+Lancaster University \\
+%\todo{When this says address, does it mean anything more than lancs?}
+	{\tt \{s.wattam, p.rayson\}@lancaster.ac.uk}}
+
+%\address{ School of Computing & Communications, Mathematics and Statistics \\
+%               Address1, Address2, Address3 \\
+%               author1@xxx.yy, author2@zzz.edu, author3@hhh.com\\}
+%\author{Stephen Wattam, Paul Rayson \& Damon Berridge \\
+%	Lancaster University \\
+%	{\tt \{s.wattam, p.rayson, d.berridge\}@lancaster.ac.uk}}
+
+% =============================================================================
+% can we remove the abstract to save space without breaking the style?
+\abstract{
+    \input{abstract.inc}
+}
+
+% =============================================================================
+% Document body
+\begin{document}
+\maketitleabstract
+
+% -------------------------------------------------------------------
+\section{Introduction}
+\input{introduction.inc}
+
+% although this is an extended abstract, i think it's good to retain the structure if we can fit it in
+% I hereby merge intro and background as discussed
+% -------------------------------------------------------------------
+\section{Toolchain}
+\input{toolchain.inc}
+
+
+
+
+% -------------------------------------------------------------------
+\section{High-Performance Systemo}
+\input{system.inc}
+
+
+% -------------------------------------------------------------------
+\section{The Hansard Corpus}
+\input{corpus.inc}
+
+
+% -------------------------------------------------------------------
+\section{Method}
+\input{method.inc}
+
+
+% -------------------------------------------------------------------
+\section{Performance}
+\input{performance.inc}
+
+
+
+% -------------------------------------------------------------------
+\section{Discussion}
+\input{discussion.inc}
+
+
+
+% =============================================================================
+\bibliographystyle{lrec2006}
+\bibliography{hansard-lr14}
+
+%\begin{thebibliography}{}
+%\end{thebibliography}
+
+
+% =============================================================================
+\end{document}
+

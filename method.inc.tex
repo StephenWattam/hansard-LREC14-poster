@@ -1,0 +1,51 @@
+\subsection{Limitations \& Solutions}
+\begin{itemize}
+    \item Small files (filesystem overhead)
+        \begin{itemize}
+            \item Input files [tarred, stored in RO storage]
+            \item Temp files and toolchain comms [on nodes]
+            \item Output file storage [tarred, stored on shared disk after tarring]
+        \end{itemize}
+    \item Small jobs (job overhead)
+        \begin{itemize}
+            \item Batching using ID numbers
+            \item Scheduling to distribute load (many jobs, composite job thing)
+        \end{itemize}
+    \item Co-ordination of parallel tasks
+        \begin{itemize}
+            \item Use of a pre-built index
+            \item batches of fixed size, job ID computes offset
+        \end{itemize}
+\end{itemize}
+
+
+
+\subsection{Final Method}
+\begin{itemize}
+    \item Corpus pre-tarred into daily runs so as to avoid filesize issues and problems with multiple-directory structure
+    \item Corpus stored in read-only space due to size
+    \item Everything compiled in ~/.local directory on server, batch scripts set up for toolchain in new shell
+    \item Produce directory listing of input file groups
+    \item Batch file
+        \begin{itemize}
+            \item Computes batch size from batch ID
+            \item Duplicates directory tree in the working compute node
+            \item extracts everything
+            \item Runs pipeline over each file
+            \item Archives results 
+            \item Archives all of those results to produce a large file for storage on panasas shelf
+            \item Copies back
+            \item Deletes compute node
+            \item Stores stdout/stderr in common location with batch ID
+        \end{itemize}
+    \item Output structure taken off HEC
+    \item Validation script tests:
+        \begin{itemize}
+            \item output files exist
+            \item The right number of files is in the output/input tars
+            \item File sizes are nonzero
+        \end{itemize}
+\end{itemize}
+
+
+

@@ -1,0 +1,29 @@
+\begin{itemize}
+    \item When moving processing to a high performance cluster there are two main gains:
+        \begin{itemize}
+            \item Parallelism, which greatly benefits this problem as it is 'embarrassingly parallel'
+            \item Serial speed of each compute node (clusters are usually well specified w.r.t. RAM and CPU provisions)
+        \end{itemize}
+\end{itemize}
+
+\subsection{Non-HEC}
+Throughput for toolchain on a typical current system, say, an i5.  \todo{Run on my machine}
+
+
+\subsection{HEC}
+Times from the summary script\todo{median would be better; density plot of the below; plot vs. filesizes should be ~linear}.
+
+{\small
+\begin{verbatim}
+Total time (s): 24428748    ( / 60 / 60 / 24 = 282 days on the HPC )
+Mean (s): 10955             ( / 60 / 60 = 3.04 hours )
+Min (s): 223                ( / 60 = 3.7 minutes )
+Max (s): 98872              ( / 60 / 60 = 27 hours )
+\end{verbatim}
+}
+
+\begin{itemize}
+    \item Throughput on HEC
+    \item Scalability of HEC setup
+\end{itemize}
+

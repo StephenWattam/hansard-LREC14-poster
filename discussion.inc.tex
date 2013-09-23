@@ -1,0 +1,12 @@
+\begin{itemize}
+    \item Compare against the price of manually parallelising on a "few" commodity systems--
+        \begin{itemize}
+            \item Dev time
+            \item Execution time
+            \item Relative speed up
+            \item Relative difficulty avoiding job overheads, etc.
+        \end{itemize}
+\end{itemize}
+
+The problem is embarrassingly parallel, but the HEC incurs severe overheads for some operations that are fast on commodity systems.  This effect is particularly noticable as the toolchain was designed with such systems in mind.  Further, the development and deployment overhead significantly extends the time taken to run the tagger (2 weeks of dev).  
+

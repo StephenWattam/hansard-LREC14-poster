@@ -8,5 +8,10 @@
         \end{itemize}
 \end{itemize}
 
-The problem is embarrassingly parallel, but the HEC incurs severe overheads for some operations that are fast on commodity systems.  This effect is particularly noticable as the toolchain was designed with such systems in mind.  Further, the development and deployment overhead significantly extends the time taken to run the tagger (2 weeks of dev).  
+Though parallelisation undoubtedly saved countless hours, the design of the toolchain mandated significant manual intervention, and use of HEC machinery arguably did little to favour existing constraints.
+
+Two weeks was spent developing and testing the HEC deployment of the toolchain.  Of this, a significant portion was spent adapting the toolchain to run on the scheduler without restriction from the shared filesystem.
+
+The problem is embarrassingly parallel, but the HEC incurs severe overheads for some operations that are fast on commodity systems.  This effect is particularly noticable as the toolchain was designed with such systems in mind.  One possible alternative to use of such specialised hardware would be manually parallelising the toolchain over a number of desktop systems.  This has a number of advantages in terms of development time, and greatly simplifies the deployment in terms of software requirements (especially as a whole system can then be booted from cloned external disks or the network).  In situations where the toolchain to be run is not inherently parallel, and the problem is, this could prove a relative cheap, fast, and easy option.
+
 

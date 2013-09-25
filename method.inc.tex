@@ -1,51 +1,139 @@
 \subsection{Limitations \& Solutions}
-\begin{itemize}
-    \item Small files (filesystem overhead)
-        \begin{itemize}
-            \item Input files [tarred, stored in RO storage]
-            \item Temp files and toolchain comms [on nodes]
-            \item Output file storage [tarred, stored on shared disk after tarring]
-        \end{itemize}
-    \item Small jobs (job overhead)
-        \begin{itemize}
-            \item Batching using ID numbers
-            \item Scheduling to distribute load (many jobs, composite job thing)
-        \end{itemize}
-    \item Co-ordination of parallel tasks
-        \begin{itemize}
-            \item Use of a pre-built index
-            \item batches of fixed size, job ID computes offset
-        \end{itemize}
-\end{itemize}
+The CLAWS toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion.  Because of this design, the toolchain respects a number of common limits that apply to desktop computers (for example, low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file IO).
+
+Many of these properties do not transfer to larger clusters, and a number of changes had to be made in order to align the processing stages with the resources available on the HEC system being used.
+
+
+\paragraph{File Access}
+The CLAWS toolchain makes extensive use of small output and intermediate files when processing.  This incurs a significant performance overhead when used with filesystems that are typical in high-end distributed systems, which typically use large block sizes.
+
+In managing output files, the toolchain often opens multiple files.  For this particular process, each input file causes creation of \todo{n} intermediate and output files.  When parallelised, the number of concurrent operations performed on a shared filesystem is thus greatly magnified.
+
+A combination of these two design characteristics and the organisation of the corpus itself (stored as many small files) proved to be a severe limitation during the tagging operation as parallel instances soon overwhelmed the 500MBps bandwidth limit on the storage system used.
+
+% ---
+The solution to this problem used affected the whole toolchain.  First, the input data (the corpus itself) was archived such that each day was contained within a single tar archive.  This input file could then be copied with a single operation from the shared drive.
+
+The toolchain was edited to include extraction of this input data into a temporary folder, stored in the memory of the compute node upon which it was running.
+
+Following execution, all output was again archived using \mon{tar} and copied back to the shared drive.  This process necessitated a further stage after processing where the output data would be checked and extracted.
+
+
+\paragraph{Memory Size}
+The toolchain used was originally build to run on computers with modest memory requirements.  As such, it uses temporary files for some of its larger volumes of working data.
+
+Due to the modest size of the input files used, we were unable to exploit the relatively high 24GB memory space on each of the compute nodes without re-architecturing the toolchain itself, and this difference went largely unexploited.  As mentioned above, however, this memory space was used to mitigate the IO bandwidth required of shared storage systems.
+
+
+
+
+
+
+\paragraph{Indexing and Co-ordination}
+Due to the distribution method used to mitigate file access rate limits, the tagging toolchain was operating using a check-out process.  As such, a system of co-ordination was necessary to prevent tasks colliding.
+
+This was accomplished by using a flatfile, centrally-stored and accessed once per batch, that contained a list of input archives.  This list was split line-by-line using \mon{sed}, and a range of input files was chosen based on the job ID environment variable exposed by the scheduling system.  This ensured that a unique range of files were taken for each job, and no task relied on the output from another.
+
+The number of input archives per batch was chosen in order to keep scheduling overheads low whilst ensuring that jobs were small enough to smooth out their file access and ensure that any failures did not affect large areas of the corpus.  Ultimately, each job was run using 20 input directories, chosen to take 30 minutes using average input files.
+
+
+\paragraph{Scheduling Overhead}
+The overhead incurred by a shared scheduling system is significant compared to a typical process creation task.  This was compounded by the co-ordination method above, which required multiple processes to run and multiple IO operations to copy data onto the compute node.
+
+As mentioned above, this problem was largely solved by tagging multiple directories within a single batch, re-using each compute node many times before copying results back.
+
+\paragraph{Per-node Parallelism}
+Each compute node on the HEC system used is furnished with 8-12 processor cores.  Unfortunately, CLAWS itself makes at best modest use of this parallelism.
+
+{\dr It looks like I didn't bother optimising for this, so we could achieve around 8 times the throughput if I rework the shell script}
+
+
+% \begin{itemize}
+%     \item Small files (filesystem overhead)
+%         \begin{itemize}
+%             \item Input files [tarred, stored in RO storage]
+%             \item Temp files and toolchain comms [on nodes]
+%             \item Output file storage [tarred, stored on shared disk after tarring]
+%             \item 'you'll also need to think about total I/O bandwidth; bear in mind that we have a maximum capacity of 500 MB/s across the cluster' -- MP
+%            \item "The corpus gets ~8.2 times bigger when processed (including original data), so any result is going to sum to around 400 GB in 7,545,102 small files." -- me
+%         \end{itemize}
+%     \item Small jobs (job overhead)
+%         \begin{itemize}
+%             \item Batching using ID numbers
+%             \item Scheduling to distribute load (many jobs, composite job thing)
+%         \end{itemize}
+%     \item Co-ordination of parallel tasks
+%         \begin{itemize}
+%             \item Use of a pre-built index
+%             \item batches of fixed size, job ID computes offset
+%         \end{itemize}
+% \end{itemize}
 
 
 
 \subsection{Final Method}
+The final method involved three main stages:
+
+\begin{enumerate}
+    \item Batching of input data for each tagging job
+    \item Processing using scheduled batch jobs on the HEC cluster
+    \item Validation and extraction
+\end{enumerate}
+
+These were largely selected to avoid limitations, or exploit strengths, in the cluster architecture used.
+
+\paragraph{Preprocessing}
+This was necessarily performed prior to uploading data onto the cluster itself, and involved producing an (uncompressed) tar archive of each day's corpus data.
+
+After these data were batched, they were uploaded to the cluster and a list was generated indexing each archive in a one-line-per-file format.  The position of this index was included in the batch processing script passed to the scheduler.
+
+\paragraph{Processing}
+Processing proceeded first by identifying input archives and copying them to a working directory within the assigned compute node.  This working directory was mounted in memory, yielding minor performance improvements and utilising some of the space available there\footnote{the toolchain was designed in the 1990s, and uses little memory compared to the compute node's limits or even a modestly provisioned modern desktop system}.
+
+From there, a script iterated through each of the input files serially, running one instance of the toolchain before archiving the results and placing them in an output directory.
+
+After the batch had completed, each output directory was itself archived and placed in a copy of the input corpus' structure on shared storage.  This system reduced the number of IO operations performed on shared storage to roughly 24 move or copy operations per job.
+
+Using 20 days' input per job resulted in 2230 total jobs, each tuned to last roughly 30 minutes.
+
+
+\paragraph{Postprocessing}
+After the output structure was downloaded from the high performance cluster, a script was run in order to verify that:
+
 \begin{itemize}
-    \item Corpus pre-tarred into daily runs so as to avoid filesize issues and problems with multiple-directory structure
-    \item Corpus stored in read-only space due to size
-    \item Everything compiled in ~/.local directory on server, batch scripts set up for toolchain in new shell
-    \item Produce directory listing of input file groups
-    \item Batch file
-        \begin{itemize}
-            \item Computes batch size from batch ID
-            \item Duplicates directory tree in the working compute node
-            \item extracts everything
-            \item Runs pipeline over each file
-            \item Archives results 
-            \item Archives all of those results to produce a large file for storage on panasas shelf
-            \item Copies back
-            \item Deletes compute node
-            \item Stores stdout/stderr in common location with batch ID
-        \end{itemize}
-    \item Output structure taken off HEC
-    \item Validation script tests:
-        \begin{itemize}
-            \item output files exist
-            \item The right number of files is in the output/input tars
-            \item File sizes are nonzero
-        \end{itemize}
+    \item All files were processed
+    \item The number of files in each output archive was correct
+    \item Filesizes are nonzero
 \end{itemize}
+
+Additionally, the standard error logs were inspected to identify any failed tagging runs.  This resulted in three failed files, each of which proved to fail when run manually and remained untagged.
+
+% 
+% \begin{itemize}
+%     \item Corpus pre-tarred into daily runs so as to avoid filesize issues and problems with multiple-directory structure
+%     \item Corpus stored in read-only space due to size
+%     \item Everything compiled in ~/.local directory on server, batch scripts set up for toolchain in new shell
+%     \item Produce directory listing of input file groups
+%     \item Batch file
+%         \begin{itemize}
+%             \item Computes batch size from batch ID ((id - 1) * batchsize) to (id * batchsize)
+%             \item Duplicates n items from directory tree in the working compute node (20 in practice)
+%             \item extracts everything
+%             \item Runs pipeline over each file
+%             \item Archives results
+%             \item Archives all of those results to produce a large file for storage on panasas shelf
+%             \item Copies results to shared result tree
+%             \item Deletes compute node working data
+%             \item Stores stdout/stderr in common location with batch ID
+%         \end{itemize}
+%     \item Output structure taken off HEC
+%     \item Validation script tests:
+%         \begin{itemize}
+%             \item output files exist
+%             \item The right number of files is in the output/input tars
+%             \item File sizes are nonzero
+%         \end{itemize}
+% \end{itemize}
 
 
 

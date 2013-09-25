@@ -9,10 +9,10 @@
 \usepackage{graphicx}
 
 \usepackage[textsize=tiny]{todonotes}
-% \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{xcolor}
 
-%\usepackage[margin=1in]{geometry}
-%\usepackage[section]{placeins}
+\usepackage{fancyvrb}
+
 % =============================================================================
 % Custom commands
 %\setlength\titlebox{6.5cm}    % Expanding the titlebox
@@ -20,6 +20,10 @@
 \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
 \newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
 \newcommand{\mon}[1]{{\tt #1}}
+
+% Draft colour
+% use \dr{stuff you want redrafting} to highlight something.
+\newcommand{\dr}[1]{{\color{blue} #1}}%
 
 % =============================================================================
 % Package config
@@ -29,7 +33,7 @@
 
 % =============================================================================
 % Title and header content; metadata
-\title{Experiences with Parallelisation of CLAWS: }
+\title{Experiences with Parallelisation of an Existing NLP Toolkit: Hansard and USAS/semtag/claws/\#\#name}
 
 
 \name{Stephen Wattam\superscript{\small{1}}, 
@@ -50,14 +54,12 @@ Lancaster University \\
 
 % =============================================================================
 % can we remove the abstract to save space without breaking the style?
-\abstract{
-    \input{abstract.inc}
-}
+\abstract{ \input{abstract.inc} }
 
 % =============================================================================
 % Document body
 \begin{document}
-\maketitleabstract
+\maketitleabstract%
 
 % -------------------------------------------------------------------
 \section{Introduction}
@@ -70,10 +72,8 @@ Lancaster University \\
 \input{toolchain.inc}
 
 
-
-
 % -------------------------------------------------------------------
-\section{High-Performance Systemo}
+\section{High-Performance System}
 \input{system.inc}
 
 

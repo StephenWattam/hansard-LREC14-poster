@@ -11,7 +11,7 @@ Throughput for toolchain on a typical current system, say, an i5.  \todo{Run on 
 
 
 \subsection{HEC}
-Times from the summary script\todo{median would be better; density plot of the below; plot vs. filesizes should be ~linear}.
+Times from the summary script.
 
 
 \begin{figure}[h]
@@ -38,7 +38,12 @@ Max (s): 98872              ( / 60 / 60 = 27 hours )
 \end{verbatim}
 }
 
-Jobs were complete in 3 days.
+
+
+
+Jobs were complete in 3 days, equating to 31,555,349 words tagged per hour (though variable task lengths mean that this rate was not constant).
+
+Jobs used between 80 and 120MB of memory at maximum point (jobs were not optimised for memory usage and the toolchain is very light on RAM).
 
 "Each task runs all files in 20 directories through the tagger.  The other times are per-task could time info, just to give an idea of the variance.
 The minimum is probably flawed because the list of directories was padded to be divisible by 20."

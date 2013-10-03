@@ -6,44 +6,65 @@
         \end{itemize}
 \end{itemize}
 
-\subsection{Non-HEC}
-Throughput for toolchain on a typical current system, say, an i5.  \todo{Run on my machine}
+\subsection{Commodity Hardware}
+In many cases, the alternative to deployment on a HEC cluster will be use of one or many commodity desktop machines.  In order to compare the performance of the toolchain, a random sample of 50 jobs was run through the toolchain using lightly-modified versions of the scheduling scripts described above.
 
+The hardware used was a desktop machine with a single Intel i5 processor, 15GB of memory, and two 7200rpm mechanical hard disks in a RAID-0 configuration.  We believe this constitutes a system equivalent to many found across offices today.
+
+
+
+\dr{ TODO: wait for the insanely tedious script to run.}
+
+\dr{ Each core was, on average, n\% slower than the workers on the HEC.  This means that the CPU time expected on commodity hardware sums to X days, compared to X days on the HEC itself.
+
+    [ statistically compare sample to HEC value ]
+}
 
 \subsection{HEC}
 Times from the summary script.
 
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{jobtime.eps}
-\caption{Distribution of job execution times on the HEC}
-\label{fig:jobtimes}
+    \centering
+    \includegraphics[width=0.5\textwidth]{jobtime.eps}
+
+    \begin{tabular}{ | r | c | c | c | c | c | }
+        \hline
+        Percentile & 5 & 25 & 50 & 75 & 95 \\ \hline
+        Duration & 20m & 53m & 2.5h & 4.5h & 7.25h \\ \hline
+    \end{tabular}
+
+    \caption{Distribution of job execution times on the HEC}
+    \label{fig:jobtimes}
 \end{figure}
 
 
+% 
+% {\small
+% \begin{verbatim}
+% Total time (s): 24428748    ( / 60 / 60 / 24 = 282 days on the HPC )
+% Mean (s): 10955             ( / 60 / 60 = 3.04 hours )
+% Min (s): 223                ( / 60 = 3.7 minutes )
+% Max (s): 98872              ( / 60 / 60 = 27 hours )
+% 
+% 
+% > quantile(x$time, c(.05, .25, .50, .75, .95))
+%        5%       25%       50%       75%       95% 
+%  1248.897  3174.155  9321.105 16462.717 26126.913 
+%  20 mins   53 mins   2.5 hrs  4.5 hrs   7.25hrs
+% \end{verbatim}
+% }
+% 
 
-{\small
-\begin{verbatim}
-Total time (s): 24428748    ( / 60 / 60 / 24 = 282 days on the HPC )
-Mean (s): 10955             ( / 60 / 60 = 3.04 hours )
-Min (s): 223                ( / 60 = 3.7 minutes )
-Max (s): 98872              ( / 60 / 60 = 27 hours )
-
-
-> quantile(x$time, c(.05, .25, .50, .75, .95))
-       5%       25%       50%       75%       95% 
- 1248.897  3174.155  9321.105 16462.717 26126.913 
- 20 mins   53 mins   2.5 hrs  4.5 hrs   7.25hrs
-\end{verbatim}
-}
 
 
 
+Jobs were complete in 3 days, meaning that the system tagged at a rate of 31.5 million words 
+%31,555,349 words 
+per hour.  Because of the heterogeniety in task length, this rate was not constant, decaying towards the end (the final 300) as the queued tasks ran out.  Had we used larger batches, this effect would have proven more severe as the variance in job length was liable to increase.
 
-Jobs were complete in 3 days, equating to 31,555,349 words tagged per hour (though variable task lengths mean that this rate was not constant).
 
-Jobs used between 80 and 120MB of memory at maximum point (jobs were not optimised for memory usage and the toolchain is very light on RAM).
+Jobs used between 80 and 120MB of memory at maximum point.  Since the HEC  (jobs were not optimised for memory usage and the toolchain is very light on RAM).
 
 "Each task runs all files in 20 directories through the tagger.  The other times are per-task could time info, just to give an idea of the variance.
 The minimum is probably flawed because the list of directories was padded to be divisible by 20."

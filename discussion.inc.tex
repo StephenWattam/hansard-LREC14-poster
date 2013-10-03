@@ -1,17 +1,24 @@
-\begin{itemize}
-    \item Compare against the price of manually parallelising on a "few" commodity systems--
-        \begin{itemize}
-            \item Dev time
-            \item Execution time
-            \item Relative speed up
-            \item Relative difficulty avoiding job overheads, etc.
-        \end{itemize}
-\end{itemize}
+% \begin{itemize}
+%     \item Compare against the price of manually parallelising on a "few" commodity systems--
+%         \begin{itemize}
+%             \item Dev time
+%             \item Execution time
+%             \item Relative speed up
+%             \item Relative difficulty avoiding job overheads, etc.
+%         \end{itemize}
+% \end{itemize}
 
 Though parallelisation undoubtedly saved countless hours, the design of the toolchain mandated significant manual intervention, and use of HEC machinery arguably did little to favour existing constraints.
 
 Two weeks was spent developing and testing the HEC deployment of the toolchain.  Of this, a significant portion was spent adapting the toolchain to run on the scheduler without restriction from the shared filesystem.
 
-The problem is embarrassingly parallel, but the HEC incurs severe overheads for some operations that are fast on commodity systems.  This effect is particularly noticable as the toolchain was designed with such systems in mind.  One possible alternative to use of such specialised hardware would be manually parallelising the toolchain over a number of desktop systems.  This has a number of advantages in terms of development time, and greatly simplifies the deployment in terms of software requirements (especially as a whole system can then be booted from cloned external disks or the network).  In situations where the toolchain to be run is not inherently parallel, and the problem is, this could prove a relative cheap, fast, and easy option.
 
+
+The problem is embarrassingly parallel, but the HEC incurs severe overheads for some operations that are fast on commodity systems.  This effect is particularly noticable as the toolchain was designed with such systems in mind.  One possible alternative to use of such specialised hardware would be manually parallelising the toolchain over a number of desktop systems.  
+
+This has a number of advantages in terms of development time, and greatly simplifies the deployment in terms of software requirements (especially as a whole system can then be booted from cloned external disks or the network).  In situations where the toolchain to be run is not inherently parallel, and the problem is, this could prove a relative cheap, fast, and easy option.
+
+\dr{Revise the above when data about relative single-worker speed comes in}
+
+The structure of the HEC required that jobs were constructed to take a minimum time, in order to minimise the load on I/O systems.  This constraint increases the risk of running wildly heterogenous tasks, something that ultimately reduces the efficiency of the parallelisation as jobs run out.  There are three possible solutions to this: jobs can be made as small as possible whilst testing for I/O stress (this is the approach we used); job duration may be modelled and a batch size chosen to trade off the two properties; or the input data may be re-distributed between to create batches with homogenous runtimes.  The heterogeniety of our runtimes indicates that, for larger corpora where there is are stricter runtime constraints, a mix of these three methods may be necessary to ensure efficient and timely execution.
 

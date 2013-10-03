@@ -49,12 +49,20 @@ The corpus is split into 7,545,103 XML files, each representing a speech made in
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{filesize.eps}
-    \caption{Distribution of log filesizes for all corpus data}
+
+
+    \begin{tabular}{ | r | c | c | c | c | c | }
+        \hline
+        Percentile & 5 & 25 & 50 & 75 & 95 \\ \hline
+        Words & 40 & 83 & 147 & 308 & 1400 \\ \hline
+    \end{tabular}
+
+    \caption{Distribution of log filesizes for all corpus data, and word counts (without markup) for each file.}
     \label{fig:filesizes}
 \end{figure}
 
 
-\dr{The XML format used contains annotations for X, Y and Z, and follows various conventions.  }
+\dr{The XML format used contains annotations for X, Y and Z, and follows various conventions...  }
 
 The XML files themselves follow x format\todo{unsure of this, SW}. File sizes are distributed in a Zipfian manner, as shown in Figure~\ref{fig:filesizes}. The median size is just 2.4KB, and the 95th percentile is 1.4MB.
 

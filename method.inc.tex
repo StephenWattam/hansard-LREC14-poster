@@ -1,5 +1,5 @@
 \subsection{Limitations \& Solutions}
-The CLAWS toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion.  Because of this design, the toolchain respects a number of common limits that apply to desktop computers (for example, low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file IO).
+The CLAWS toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion.  Because of this design, the toolchain respects a number of common limits that apply to desktop computers (for example, low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file I/O).
 
 Many of these properties do not transfer to larger clusters, and a number of changes had to be made in order to align the processing stages with the resources available on the HEC system being used.
 
@@ -7,7 +7,7 @@ Many of these properties do not transfer to larger clusters, and a number of cha
 \paragraph{File Access}
 The CLAWS toolchain makes extensive use of small output and intermediate files when processing.  This incurs a significant performance overhead when used with filesystems that are typical in high-end distributed systems, which typically use large block sizes.
 
-In managing output files, the toolchain often opens multiple files.  For this particular process, each input file causes creation of \todo{n} intermediate and output files.  When parallelised, the number of concurrent operations performed on a shared filesystem is thus greatly magnified.
+In managing output files, the toolchain often opens multiple files.  For this particular process, each input file causes creation of 10\todo{check} intermediate and output files.  When parallelised, the number of concurrent operations performed on a shared filesystem is thus greatly magnified.
 
 A combination of these two design characteristics and the organisation of the corpus itself (stored as many small files) proved to be a severe limitation during the tagging operation as parallel instances soon overwhelmed the 500MBps bandwidth limit on the storage system used.
 
@@ -22,7 +22,7 @@ Following execution, all output was again archived using \mon{tar} and copied ba
 \paragraph{Memory Size}
 The toolchain used was originally build to run on computers with modest memory requirements.  As such, it uses temporary files for some of its larger volumes of working data.
 
-Due to the modest size of the input files used, we were unable to exploit the relatively high 24GB memory space on each of the compute nodes without re-architecturing the toolchain itself, and this difference went largely unexploited.  As mentioned above, however, this memory space was used to mitigate the IO bandwidth required of shared storage systems.
+Due to the modest size of the input files used, we were unable to exploit the relatively high 24GB memory space on each of the compute nodes without re-architecturing the toolchain itself, and this difference went largely unexploited.  As mentioned above, however, this memory space was used to mitigate the I/O bandwidth required of shared storage systems.
 
 
 
@@ -38,14 +38,14 @@ The number of input archives per batch was chosen in order to keep scheduling ov
 
 
 \paragraph{Scheduling Overhead}
-The overhead incurred by a shared scheduling system is significant compared to a typical process creation task.  This was compounded by the co-ordination method above, which required multiple processes to run and multiple IO operations to copy data onto the compute node.
+The overhead incurred by a shared scheduling system is significant compared to a typical process creation task.  This was compounded by the co-ordination method above, which required multiple processes to run and multiple I/O operations to copy data onto the compute node.
 
 As mentioned above, this problem was largely solved by tagging multiple directories within a single batch, re-using each compute node many times before copying results back.
 
 \paragraph{Per-node Parallelism}
 Each compute node on the HEC system used is furnished with 8-12 processor cores.  Unfortunately, CLAWS itself makes at best modest use of this parallelism.
 
-{\dr It looks like I didn't bother optimising for this, so we could achieve around 8 times the throughput if I rework the shell script}
+\dr{It looks like I didn't bother optimising for this, so we could achieve around 8 times the throughput if I rework the shell script}
 
 
 % \begin{itemize}
@@ -92,7 +92,7 @@ Processing proceeded first by identifying input archives and copying them to a w
 
 From there, a script iterated through each of the input files serially, running one instance of the toolchain before archiving the results and placing them in an output directory.
 
-After the batch had completed, each output directory was itself archived and placed in a copy of the input corpus' structure on shared storage.  This system reduced the number of IO operations performed on shared storage to roughly 24 move or copy operations per job.
+After the batch had completed, each output directory was itself archived and placed in a copy of the input corpus' structure on shared storage.  This system reduced the number of I/O operations performed on shared storage to roughly 24 move or copy operations per job.
 
 Using 20 days' data per job resulted in 2230 total jobs, each tuned to last roughly 30 minutes.
 

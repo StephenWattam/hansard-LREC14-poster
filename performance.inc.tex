@@ -6,23 +6,8 @@
         \end{itemize}
 \end{itemize}
 
-\subsection{Commodity Hardware}
-In many cases, the alternative to deployment on a HEC cluster will be use of one or many commodity desktop machines.  In order to compare the performance of the toolchain, a random sample of 50 jobs was run through the toolchain using lightly-modified versions of the scheduling scripts described above.
-
-The hardware used was a desktop machine with a single Intel i5 processor, 15GB of memory, and two 7200rpm mechanical hard disks in a RAID-0 configuration.  We believe this constitutes a system equivalent to many found across offices today.
-
-
-
-\dr{ TODO: wait for the insanely tedious script to run.}
-
-\dr{ Each core was, on average, n\% slower than the workers on the HEC.  This means that the CPU time expected on commodity hardware sums to X days, compared to X days on the HEC itself.
-
-    [ statistically compare sample to HEC value ]
-}
 
 \subsection{HEC}
-Times from the summary script.
-
 
 \begin{figure}[h]
     \centering
@@ -31,7 +16,7 @@ Times from the summary script.
     \begin{tabular}{ | r | c | c | c | c | c | }
         \hline
         Percentile & 5 & 25 & 50 & 75 & 95 \\ \hline
-        Duration & 20m & 53m & 2.5h & 4.5h & 7.25h \\ \hline
+        Duration & 20m & 53m & 2.5h & 4.5h & 7.3h \\ \hline
     \end{tabular}
 
     \caption{Distribution of job execution times on the HEC}
@@ -74,3 +59,44 @@ The minimum is probably flawed because the list of directories was padded to be 
     \item Scalability of HEC setup
 \end{itemize}
 
+
+
+
+
+\subsection{Commodity Hardware}
+In many cases, the alternative to deployment on a HEC cluster will be use of one or many commodity desktop machines.  In order to compare the performance of the toolchain, a random sample of 50 jobs was run through the toolchain using the scheduling scripts described above.
+
+The hardware used was a desktop machine with a single Intel i5 processor, 15GB of memory, and two 7200rpm mechanical hard disks in a RAID-0 configuration.  The system was running arch linux\footnote{\url{http://archlinux.org}}, and work continued on other projects during the benchmark.  We believe this constitutes a system equivalent to many found across offices today.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{timecomp.eps}
+    % postscript("timecomp.eps", height=5, width=6.5)
+    % plot(density(times$tdesk/3600, bw=2000/3600), xlim=c(0, 30000/3600), main="Job time distribution, HEC vs. Desktop", xlab="Time (h); smoothing bandwidth = 33 minutes")
+    % lines(density(times$thec/3600, bw=2000/3600), col=2)
+    % legend("topright", c("desktop", "hec"), lty=1, col=c(1,2))
+    % dev.off();
+
+    % -------------
+    % > quantile(times$thec, c(.05, .25, .50, .75, .95))
+    %        5%       25%       50%       75%       95% 
+    %  1322.534  3404.690  8524.075 14848.393 20306.699 
+    % > quantile(times$tdesk, c(.05, .25, .50, .75, .95))
+    %         5%        25%        50%        75%        95% 
+    %   552.9762  1332.1664  3804.2810  8380.7053 10042.5802 
+
+    \begin{tabular}{ | r | c | c | c | c | c | }
+        \hline
+        Percentile & 5 & 25 & 50 & 75 & 95 \\ \hline
+        HEC        & 22m & 57m & 2.4h & 4.1h & 5.6h \\ \hline
+        Desktop    & 9m & 22m & 1h & 2.3h & 2.8h \\ \hline
+    \end{tabular}
+
+    \caption{HEC and Desktop job execution times for a sample of 50 jobs}
+    \label{fig:timecomp}
+\end{figure}
+
+
+As can be seen in Figure~\ref{fig:timecomp}, the desktop system runs jobs significantly faster.  Fitting a linear model indicates that the desktop is able to run jobs approximately 2.1 times faster than a single HEC core.  
+
+Had we continued to tag the corpus in this manner, it would have taken 98 days on the desktop system.

@@ -47,11 +47,10 @@
 
 
 
-Jobs were complete in 3 days, meaning that the system tagged at a rate of 31.5 million words 
+All jobs were complete in 3 days, meaning that the system tagged at a rate of 31.5 million words 
 %31,555,349 words 
 per hour.  Because of the heterogeniety in task length, this rate was not constant, decaying towards the end (the final 232) as the queued tasks ran out and were not replaced.  Had we used larger batches, this effect would have proven more severe as the variance in job length was liable to increase.  Were the corpus particularly large (in the range of hundreds of billions of words), it would be prudent to model and control for this effect ahead of time.
-
-Jobs used a maximum of between 80 and 120MB of memory, not counting use of the temporary disk.  Large changes would be necessary to the toolchain in order to improve utilisation.  It should also be possible to improve the tagging rate by further parallelising within each compute node, as mentioned earlier.  This would theoretically shorten the time spent tagging by a factor of 8 to just 9 hours.
+Jobs used a maximum of between 80 and 120MB of memory, not counting use of the temporary disk.  Large changes would be necessary to the toolchain in order to improve utilisation.  It should also be possible to improve the tagging rate by further parallelising within each compute node.  This would theoretically shorten the time spent tagging by a factor of 8 to just 9 hours.
 
 % Note that, in order to be evenly divisible by 20, the task list was padded.  This makes the minimum task execution time smaller than it would otherwise be.
 
@@ -60,7 +59,7 @@ Jobs used a maximum of between 80 and 120MB of memory, not counting use of the t
 \subsection{Commodity Hardware}
 In many cases, the alternative to deployment on a HEC cluster will be use of one or many commodity desktop machines.  In order to compare the performance of the toolchain, a random sample of 50 jobs was run through the toolchain using the scheduling scripts described above.
 
-The hardware used was a desktop machine with a single Intel i5 processor, 15GB of memory, and two 7200rpm mechanical hard disks in a RAID-0 configuration.  The system was running Arch Linux\footnote{\url{http://archlinux.org}}, and, as the system is the author's office machine, work continued on other projects during the benchmarks.  We believe this constitutes a system equivalent to many found across offices today.
+The hardware used was a desktop machine with a single Intel i5 processor, 15GB of memory, and two 7200rpm mechanical hard disks in a RAID-0 configuration.  The system was running Arch Linux\footnote{\url{http://archlinux.org}}, and, as the system is the first author's office machine, work continued on other projects during the benchmarks.  We believe this constitutes a system equivalent to many found across offices today.
 
 \begin{figure}[h]
     \centering
@@ -92,5 +91,4 @@ The hardware used was a desktop machine with a single Intel i5 processor, 15GB o
 
 
 As can be seen in Figure~\ref{fig:timecomp}, the desktop system runs individual jobs significantly faster.  Fitting a linear model indicates that the desktop is able to run jobs approximately 2.1 times faster than a single HEC core.  The same model indicates a 100 second job startup overhead on the HEC (including copying of files).
-
 Had we continued to tag the corpus in this manner, it would have taken 98 days on the desktop system, and thus required at least 33 equivalent machines to achieve the HEC's performance.  It seems unlikely that manually splitting the data across that many systems would save time compared to the development overheads incurred for the HEC tagger.

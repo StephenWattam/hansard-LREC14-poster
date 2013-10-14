@@ -1,4 +1,4 @@
-The system used for processing was the Lancaster university High-End Computing cluster (HEC).  This consists of a number of compute nodes running Scientific Linux\footnote{\url{https://www.scientificlinux.org/}}%
+The system used for processing was the Lancaster University High-End Computing cluster (HEC).  This consists of a number of compute nodes running Scientific Linux\footnote{\url{https://www.scientificlinux.org/}}%
 , connected using the Oracle Grid Engine\footnote{\url{http://www.oracle.com/us/products/tools/oracle-grid-engine-075549.html}}.  
 In total the system comprises over 2,200 CPU cores, 11TB of memory, 32TB of high performance file storage, and a further 1PB of medium performance storage.
 
@@ -12,8 +12,6 @@ In total the system comprises over 2,200 CPU cores, 11TB of memory, 32TB of high
 
 As shown in Figure~\ref{fig:arch}, the system is reliant on network-attached shared storage in the form of a Panasas Activescale Series 8 storage cluster\footnote{\url{http://www.panasas.com/products/activestor-14}}\cite{Nagle2004PAS1048933.1049998}.  Intermediate storage is provided by a number of other storage nodes \todo{Which bit of storage is which?}.
 % Do these provide the working shared storage/scratch, or are they only for use with GridPP?}.
-
-There are 262 compute nodes in total, each with two four- or six-core CPUs\todo{Xeons?} each.  Most of these compute nodes have 24GB of RAM available locally (those that do not have 96GB).
-
+There are 262 compute nodes in total, each with two four- or six-core CPUs\todo{Xeons?}  each.  Most of these compute nodes have 24GB of RAM available locally (those that do not have 96GB).
 The Oracle Grid Engine scheduling framework works in a batch processing manner, with active jobs competing for access to compute nodes.  This scheduler can be used to queue up job arrays in large batches, which will then be distributed to each compute node individually as they become free.  This was the primary mechanism used to distribute jobs across nodes.
 

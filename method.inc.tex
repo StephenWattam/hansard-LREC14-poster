@@ -1,21 +1,22 @@
 % \subsection{Limitations \& Solutions}
 
-The Wmatrix tag wizard toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion.  Because of this design, the toolchain respects a number of common limits that apply to desktop computers (for example, low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file I/O).
+The Wmatrix tag wizard toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion.  The toolchain thus respects a number of common limits that apply to desktop computers (e.g. low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file I/O).
 Many of these properties do not transfer to larger clusters, and a number of changes had to be made in order to align the processing stages with the resources available on the HEC system.
 
 
 \paragraph{File Access}
 The Wmatrix toolchain makes extensive use of small output and intermediate files during operation.  This incurs a significant performance overhead when used with filesystems that are typical in high-end distributed systems, which often use large block sizes, carry metadata for versioning and redundancy, or are accessible only over network links.
-For this particular process, each input file causes creation of eleven intermediate and output files.  When parallelised, the number of concurrent operations performed on a shared filesystem is thus greatly magnified.
-A combination of these two design characteristics and the organisation of the corpus itself (stored as many small files) proved to be a severe limitation during the tagging operation as parallel instances soon overwhelmed the 500MBps bandwidth limit on the storage system used.
-The solution to this problem effected changes to the whole toolchain.  First, the corpus was archived such that each day was contained within a single \mon{tar} archive.  This input file could then be copied with a single operation from the shared drive.
-The toolchain was modified to extract this input data into a temporary folder, stored on the local disk of the compute node upon which it was running.
-Following execution, all output was again archived using \mon{tar} and copied back to the shared drive.  This process necessitated a further stage after processing where the output data would be checked and extracted, which was performed after downloading data from the HEC.
+For this particular process, each input file causes creation of eleven intermediate and output files.  When parallelised, the number of concurrent I/O operations performed, along with the organisation of the corpus (stored as many small files), soon overwhelmed the bandwidth limitations of the shared filesystem.
+
+The solution to this effected changes to the whole toolchain---first, the corpus was restructured to move each day's files into a single \mon{tar} archive.  This could then be copied with a single operation from the shared drive.
+This input file was then extracted into a temporary directory on the local disk of the compute node.
+Following execution, output was again archived using \mon{tar} and copied back to the shared drive.  This process necessitated a further post--processing stage to extract and validate the output, which was performed after downloading data from the HEC.
 
 
 \paragraph{Memory Size}
-The toolchain used was originally built to run on computers with modest memory requirements.  As such, it uses temporary files for some of its larger volumes of working data, and conflates arrays at runtime in order to minimise memory usage.
-Without significant re-engineering we were unable to exploit the relatively high 24GB memory space on each of the compute nodes.  
+Memory provisions on systems have grown considerably since the toolchain was designed, and as such it fails to exploit even modern desktop systems. 
+%As such, it uses temporary files for some of its larger volumes of working data, and conflates arrays at runtime in order to minimise memory usage.
+Without significant re-engineering we were unable to exploit the relatively high 24GB memory space on each of the compute nodes, and this remains the most under-utilised resource.
 %As mentioned above, however, this memory space was used instead to mitigate the I/O bandwidth required of shared storage systems.
 
 
@@ -24,17 +25,18 @@ Without significant re-engineering we were unable to exploit the relatively high
 % If we need to further reduce words then this could be thinned out or commented out
 
 \paragraph{Indexing and Co-ordination}
-Due to the distribution method used to mitigate file access rate limits, the tagging toolchain was operating on data checked out of a central store.  As such, a system of co-ordination was necessary to prevent tasks colliding.
-This was accomplished by using a flatfile, centrally stored and accessed once per batch, that contained a list of input archives and their corresponding output directories.  This list was split line-by-line using \mon{sed}, and a range of input files was chosen based on the `job ID' environment variable exposed by the scheduling system.  This ensured that a unique range of files were taken for each job, and no task relied on the output from another.
-The number of input archives tagged per job was chosen to balance scheduling overheads with the need to `smooth out' file access and ensure that any failures did not affect large areas of the corpus.  Ultimately, each job was run using 20 input directories, chosen to take 30 minutes using average input files.
+As work was completed away from the shared disk, a system was necessary to co-ordinate compute nodes' access to data.
+This was accomplished by using a flatfile, centrally stored and accessed once per batch, that contained a list of input archives and their corresponding output directories.  
+The numeric `job ID' environment variable provided by the scheduler was used to compute an offset, which each job used to split the input file by line, taking a number of input files for a single job.
+
+The number of input archives tagged per job was chosen to balance scheduling overheads with the need to `smooth out' file access and ensure that any failures did not affect large areas of the corpus.  Ultimately, each job was run using 20 input archives, chosen to take 30 minutes using average input files.
 
 
 % I think this paragraph could be commented out completely to save words
 % let's retain stuff for the final paper if accepted
 
 \paragraph{Scheduling Overhead}
-The overhead incurred by a shared scheduling system is significant compared to a typical process creation task.  This was compounded by the co-ordination method above, which required multiple processes to run and multiple I/O operations to copy data onto the compute node.
-In practice, running 2230 jobs, this overhead proved to be insignificant when compared to the time taken moving input data onto compute nodes.
+The overhead incurred by a shared scheduling system is significant compared to a typical process creation task (exacerbated by the need to copy and extract archives).  In practice, running 2230 jobs with a predicted execution time of 30 minutes each, this did not prove to be a limiting factor.
 % As mentioned above, this problem was largely solved by tagging multiple directories within a single batch, re-using each compute node many times before copying results back.
 
 

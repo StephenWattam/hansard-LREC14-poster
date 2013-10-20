@@ -10,7 +10,7 @@ In total the system comprises over 2,200 CPU cores, 11TB of memory, 32TB of high
 \label{fig:arch}
 \end{figure}
 
-As shown in Figure~\ref{fig:arch}, the system is reliant on network-attached shared storage in the form of a Panasas Activescale Series 8 storage cluster\footnote{\url{http://www.panasas.com/products/activestor-14}}\cite{Nagle2004PAS1048933.1049998}.  Intermediate storage is provided by a number of other storage nodes.
+As shown in Figure~\ref{fig:arch}, the system is reliant on network-attached shared storage in the form of a Panasas Activescale Series 8 storage cluster\footnote{\url{http://www.panasas.com/products/activestor-14}}\cite{Nagle2004PAS1048933.1049998}.  Further storage is available upon the compute nodes themselves.
 % Do these provide the working shared storage/scratch, or are they only for use with GridPP?}.
 There are 262 compute nodes in total, each with two four- or six-core Intel E5520 CPUs each.  Most of these compute nodes have 24GB of RAM available locally (those that do not have 96GB).
 The Oracle Grid Engine scheduling framework works in a batch processing manner, with active jobs competing for access to compute nodes.  This scheduler can be used to queue up job arrays in large batches, which will then be distributed to each compute node individually as they become free.  This was the primary mechanism used to distribute jobs across nodes.

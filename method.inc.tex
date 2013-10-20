@@ -1,21 +1,22 @@
 % \subsection{Limitations \& Solutions}
 
 The Wmatrix tag wizard toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion.  Because of this design, the toolchain respects a number of common limits that apply to desktop computers (for example, low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file I/O).
-Many of these properties do not transfer to larger clusters, and a number of changes had to be made in order to align the processing stages with the resources available on the HEC system being used.
+Many of these properties do not transfer to larger clusters, and a number of changes had to be made in order to align the processing stages with the resources available on the HEC system.
 
 
 \paragraph{File Access}
-The Wmatrix toolchain makes extensive use of small output and intermediate files during operation.  This incurs a significant performance overhead when used with filesystems that are typical in high-end distributed systems, as they often use large block sizes, carry metadata for versioning and redundancy, or are accessible only over network links.
-For this particular process, each input file causes creation of 11 intermediate and output files.  When parallelised, the number of concurrent operations performed on a shared filesystem is thus greatly magnified.
+The Wmatrix toolchain makes extensive use of small output and intermediate files during operation.  This incurs a significant performance overhead when used with filesystems that are typical in high-end distributed systems, which often use large block sizes, carry metadata for versioning and redundancy, or are accessible only over network links.
+For this particular process, each input file causes creation of eleven intermediate and output files.  When parallelised, the number of concurrent operations performed on a shared filesystem is thus greatly magnified.
 A combination of these two design characteristics and the organisation of the corpus itself (stored as many small files) proved to be a severe limitation during the tagging operation as parallel instances soon overwhelmed the 500MBps bandwidth limit on the storage system used.
-The solution to this problem effected changes to the whole toolchain.  First, the corpus was archived such that each day was contained within a single tar archive.  This input file could then be copied with a single operation from the shared drive.
-The toolchain was edited to include extraction of this input data into a temporary folder, stored in the memory of the compute node upon which it was running.
+The solution to this problem effected changes to the whole toolchain.  First, the corpus was archived such that each day was contained within a single \mon{tar} archive.  This input file could then be copied with a single operation from the shared drive.
+The toolchain was modified to extract this input data into a temporary folder, stored on the local disk of the compute node upon which it was running.
 Following execution, all output was again archived using \mon{tar} and copied back to the shared drive.  This process necessitated a further stage after processing where the output data would be checked and extracted, which was performed after downloading data from the HEC.
 
 
 \paragraph{Memory Size}
 The toolchain used was originally built to run on computers with modest memory requirements.  As such, it uses temporary files for some of its larger volumes of working data, and conflates arrays at runtime in order to minimise memory usage.
-Without significant re-engineering we were unable to exploit the relatively high 24GB memory space on each of the compute nodes.  As mentioned above, however, this memory space was used instead to mitigate the I/O bandwidth required of shared storage systems.
+Without significant re-engineering we were unable to exploit the relatively high 24GB memory space on each of the compute nodes.  
+%As mentioned above, however, this memory space was used instead to mitigate the I/O bandwidth required of shared storage systems.
 
 
 
@@ -25,8 +26,7 @@ Without significant re-engineering we were unable to exploit the relatively high
 \paragraph{Indexing and Co-ordination}
 Due to the distribution method used to mitigate file access rate limits, the tagging toolchain was operating on data checked out of a central store.  As such, a system of co-ordination was necessary to prevent tasks colliding.
 This was accomplished by using a flatfile, centrally stored and accessed once per batch, that contained a list of input archives and their corresponding output directories.  This list was split line-by-line using \mon{sed}, and a range of input files was chosen based on the `job ID' environment variable exposed by the scheduling system.  This ensured that a unique range of files were taken for each job, and no task relied on the output from another.
-The number of input archives tagged per job was chosen in order to keep scheduling overheads low whilst ensuring that jobs were small enough to `smooth out' file access and ensure that any failures did not affect large areas of the corpus.  Ultimately, each job was run using 20 input directories, chosen to take 30 minutes using average input files.
-
+The number of input archives tagged per job was chosen to balance scheduling overheads with the need to `smooth out' file access and ensure that any failures did not affect large areas of the corpus.  Ultimately, each job was run using 20 input directories, chosen to take 30 minutes using average input files.
 
 
 % I think this paragraph could be commented out completely to save words

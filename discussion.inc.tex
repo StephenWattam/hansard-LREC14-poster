@@ -15,11 +15,13 @@ It is worth noting that we did not fully exploit the parallel capacity of the cl
 Though these incur further development effort, they may be worthwhile for many projects, or be used to extend the lifetime of existing toolchains.
 
 In contrast to manually deploying jobs, where scheduling is automated and fast there is a benefit to having smaller jobs, as they may compete more efficiently for resources (though this must be balanced with the overheads of any scheduling itself).
-For problems where time constraints are less severe, the toolchain used is particularly specialised, or the data is less inherently parallel, there may be benefits to the simpler approach.  For our purposes, where the task was extremely parallel, the toolchain easily ported, and the timescale short, the greater concurrency offered by a high performance cluster proved invaluable.  
+For problems where time constraints are less severe, the toolchain used is particularly specialised, or the data is less inherently parallel, there may be benefits to the simpler approach.  For our purposes, where
+% the task was extremely parallel, 
+the toolchain was easily ported, and the timescale short, the greater concurrency offered by a high performance cluster proved invaluable.  
 
 % --
 
-In future work, we intend to test the HEC facilities with other corpora with different filesize distribution characteristics. We will also experiment with the MapReduce programming model through implementations such as Apache Hadoop. A key future requirement is to expose such parallel processing facilities through a programming-lite interface so that the benefits can be exploited by corpus linguists and digital humanists alike.
+In future work, we will test the HEC facilities with other corpora with different filesize distribution characteristics. We will also experiment with the MapReduce programming model through implementations such as Apache Hadoop. A key future requirement is to expose such parallel processing facilities through a programming-lite interface so that the benefits can be exploited by corpus linguists and digital humanists alike.
 
 
 

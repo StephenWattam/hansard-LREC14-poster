@@ -9,17 +9,19 @@
 % \end{itemize}
 
 Two weeks was spent developing and testing the HEC deployment of the toolchain.  Of this, a significant portion was spent adapting the toolchain to run on the scheduler without restriction from the shared filesystem.
-The problem is embarrassingly parallel, and the design of many HEC facilities is well suited to exploit that.  It is certainly the case that, even if we had manually split the data and run it on (faster) commodity hardware, we would still have incurred significant overhead in doing so.  Assuming development in that case were simpler and took just a week, we would still require ten desktop systems in order to achieve the same overall completion time.  
+The problem is embarrassingly parallel, and the design of many HEC facilities is well suited to exploit that.  It is certainly the case that, even if we had manually split the data and run it on (faster) commodity hardware, we would still have incurred significant overhead in doing so.  Assuming development in that case were simpler and took just a week, we would have required ten desktop systems in order to achieve the same overall completion time.
 
-It is worth noting that we did not fully exploit the parallel capacity of the cluster, and modifications such as parallelising upon each compute node, or pipelining, would yield vastly improved execution times\footnote{Running once per core would have reduced execution times 8-fold to just 9 hours.}.
-Though these incur further development effort, they may be worthwhile for many projects, or be used to extend the lifetime of existing toolchains.
+It is worth noting that we did not fully exploit the parallel capacity of the cluster, and modifications such as parallelising upon each compute node, or pipelining, would yield vastly improved execution times\footnote{Running once per core would have reduced execution times eight-fold to just 9 hours.}.
+Though these incur further development effort, they may be worthwhile for many projects, or be used to extend the lifespan of existing toolchains.
 
-In contrast to manually deploying jobs, where scheduling is automated and fast there is a benefit to having smaller jobs, as they may compete more efficiently for resources (though this must be balanced with the overheads of any scheduling itself).
+In contrast to manual deployment, there is a benefit to having smaller jobs where scheduling is automated and fast, as they may compete more efficiently for resources (though this must be balanced with the overheads of any scheduling itself).
 For problems where time constraints are less severe, the toolchain used is particularly specialised, or the data is less inherently parallel, there may be benefits to the simpler approach.  For our purposes, where
 % the task was extremely parallel, 
 the toolchain was easily ported, and the timescale short, the greater concurrency offered by a high performance cluster proved invaluable.  
 
 % --
+
+\vspace{10pt}
 
 In future work, we will test the HEC facilities with other corpora with different filesize distribution characteristics. We will also experiment with the MapReduce programming model through implementations such as Apache Hadoop. A key future requirement is to expose such parallel processing facilities through a programming-lite interface so that the benefits can be exploited by corpus linguists and digital humanists alike.
 

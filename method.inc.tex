@@ -14,11 +14,7 @@ Following execution, output was again archived using \mon{tar} and copied back t
 
 
 \paragraph{Memory Size}
-Memory provisions on systems have grown considerably since the toolchain was designed, and as such it fails to exploit even modern desktop systems. 
-%As such, it uses temporary files for some of its larger volumes of working data, and conflates arrays at runtime in order to minimise memory usage.
-Without significant re-engineering we were unable to exploit the relatively high 24GB memory space on each of the compute nodes.
-% , and this remains the most under-utilised resource.
-%As mentioned above, however, this memory space was used instead to mitigate the I/O bandwidth required of shared storage systems.
+Memory provisions on systems have grown considerably since the toolchain was designed, and as such it fails to exploit even modern desktop systems. The toolchain does this by trading time for space in some instances and by caching data on disk, both of which would have requied significant redevelopment to alter.  We thus elected not to fully exploit each compute node's relatively high 24GB of available memory.
 
 
 
@@ -28,119 +24,20 @@ Without significant re-engineering we were unable to exploit the relatively high
 \paragraph{Indexing and Co-ordination}
 As work was completed away from the shared disk, a system was necessary to co-ordinate compute nodes' access to data.
 This was accomplished by using a flatfile, centrally stored and accessed once per batch, that contained a list of input archives and their corresponding output directories.  
-The numeric `job ID' environment variable provided by the scheduler was used to compute an offset, which each job used to split the input file by line, taking a number of input files for a single job.
+The numeric `job ID' environment variable provided by the scheduler was used to compute an offset, which each job used to split the input file by line, selecting a batch of input files for a single job.
 
 The number of input archives tagged per job was chosen to balance scheduling overheads with the need to `smooth out' file access and ensure that any failures did not affect large areas of the corpus.  Ultimately, each job was run using 20 input archives, chosen to take 30 minutes using average input files.
 
 
-% I think this paragraph could be commented out completely to save words
-% let's retain stuff for the final paper if accepted
 
 \paragraph{Scheduling Overhead}
-The overhead incurred by a shared scheduling system is significant compared to a typical process creation task (exacerbated by the need to copy and extract archives).  In practice, running 2230 jobs with a predicted execution time of 30 minutes each, this did not prove to be a limiting factor.
-% As mentioned above, this problem was largely solved by tagging multiple directories within a single batch, re-using each compute node many times before copying results back.
+The overhead incurred by a shared scheduling system is significant compared to a typical process creation task (exacerbated by the need to copy and extract archives).  This overhead was minimised by tagging multiple directories in a single batch: in practice, running 2230 jobs with a predicted execution time of 30 minutes each, this did not prove to be a limiting factor.
+% As mentioned above, scheduling overheads were minimised by tagging multiple directories within a single batch, re-using each compute node many times before copying results back.
 
 
-
-
-
-% Commented out for now, let's include in future work if there is space
-
-% \paragraph{Per-node Parallelism}
-% Each compute node on the HEC is furnished with 8-12 processor cores.  Wmatrix itself does not take advantage of this parallelism, and no effort was made to do so in the job dispatch scripts.  As such, this remains the largest untapped source of further performance.
-
-
-% \begin{itemize}
-%     \item Small files (filesystem overhead)
-%         \begin{itemize}
-%             \item Input files [tarred, stored in RO storage]
-%             \item Temp files and toolchain comms [on nodes]
-%             \item Output file storage [tarred, stored on shared disk after tarring]
-%             \item 'you'll also need to think about total I/O bandwidth; bear in mind that we have a maximum capacity of 500 MB/s across the cluster' -- MP
-%            \item "The corpus gets ~8.2 times bigger when processed (including original data), so any result is going to sum to around 400 GB in 7,545,102 small files." -- me
-%         \end{itemize}
-%     \item Small jobs (job overhead)
-%         \begin{itemize}
-%             \item Batching using ID numbers
-%             \item Scheduling to distribute load (many jobs, composite job thing)
-%         \end{itemize}
-%     \item Co-ordination of parallel tasks
-%         \begin{itemize}
-%             \item Use of a pre-built index
-%             \item batches of fixed size, job ID computes offset
-%         \end{itemize}
-% \end{itemize}
-
-
-% I've commented out this whole subsection for now
-% We can add stuff back in if there is space
-
-% \subsection{Final Method}
-% The final method involved three main stages:
-
-% \begin{enumerate}
-%     \item Batching of input data for each tagging job;
-%     \item Processing using scheduled batch jobs on the HEC cluster;
-%     \item Validation and extraction.
-% \end{enumerate}
-
-
-% \paragraph{Preprocessing}
-% This was performed prior to uploading data onto the cluster itself, and involved producing an uncompressed \mon{tar} archive of each day's corpus data.
-
-% After these data were batched, they were uploaded to the cluster and an index was generated listing each archive in a one-line-per-file format.  The position of this index was included in the batch processing script passed to the scheduler.
-
-
-% \paragraph{Processing}
-% Jobs proceeded first by identifying input archives and copying them to a working directory within the assigned compute node.  This working directory was mounted in memory, yielding minor performance improvements and utilising some of the unused space there\footnote{The toolchain was designed in the 1990s, and uses little memory compared to the compute node's limits or even a modestly provisioned modern desktop system.}.
-
-% From there, a script iterated through each of the input files, running one instance of the toolchain before archiving the results and placing them in an output directory.
-
-% After the batch had completed, each output directory was itself archived and placed in a copy of the input corpus' structure on shared storage.  This system reduced the number of I/O operations performed on shared storage to roughly 24 move or copy operations per job.
-
-% Using 20 days' data per job resulted in 2230 total jobs, each tuned to last roughly 30 minutes.
-
-
-% \paragraph{Postprocessing}
-% After the output structure was downloaded from the high performance cluster, a script was run in order to verify that:
-
-% \begin{itemize}
-%     \item All files were processed;
-%     \item The number of files in each output archive was correct;
-%     \item Filesizes are nonzero.
-% \end{itemize}
-
-% Additionally, the standard error logs were inspected to identify any failed tagging runs.  This resulted in three failed files, each of which proved to fail when run manually and remained untagged.
-
-
-
-
-% 
-% \begin{itemize}
-%     \item Corpus pre-tarred into daily runs so as to avoid filesize issues and problems with multiple-directory structure
-%     \item Corpus stored in read-only space due to size
-%     \item Everything compiled in ~/.local directory on server, batch scripts set up for toolchain in new shell
-%     \item Produce directory listing of input file groups
-%     \item Batch file
-%         \begin{itemize}
-%             \item Computes batch size from batch ID ((id - 1) * batchsize) to (id * batchsize)
-%             \item Duplicates n items from directory tree in the working compute node (20 in practice)
-%             \item extracts everything
-%             \item Runs pipeline over each file
-%             \item Archives results
-%             \item Archives all of those results to produce a large file for storage on panasas shelf
-%             \item Copies results to shared result tree
-%             \item Deletes compute node working data
-%             \item Stores stdout/stderr in common location with batch ID
-%         \end{itemize}
-%     \item Output structure taken off HEC
-%     \item Validation script tests:
-%         \begin{itemize}
-%             \item output files exist
-%             \item The right number of files is in the output/input tars
-%             \item File sizes are nonzero
-%         \end{itemize}
-% \end{itemize}
+\paragraph{Per-node Parallelism}
+Each compute node on the HEC is furnished with 8-12 processor cores.  Wmatrix itself does not take advantage of this parallelism, and the decision was made not to introduce the complexity of pipelining into each job dispatch script. 
+As such, this remains the largest untapped source of further performance.
 
 
 

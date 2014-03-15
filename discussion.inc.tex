@@ -11,7 +11,7 @@
 Two weeks was spent developing and testing the HEC deployment of the toolchain.  Of this, a significant portion was spent adapting the toolchain to run on the scheduler without restriction from the shared filesystem.
 The problem is embarrassingly parallel, and the design of many HEC facilities is well suited to exploit that.  It is certainly the case that, even if we had manually split the data and run it on (faster) commodity hardware, we would still have incurred significant overhead in doing so.  Assuming development in that case were simpler and took just a week, we would have required ten desktop systems in order to achieve the same overall completion time.
 
-It is worth noting that we did not fully exploit the parallel capacity of the cluster, and modifications such as parallelising upon each compute node, or pipelining, would yield vastly improved execution times\footnote{Running once per core would have reduced execution times eight-fold to just 9 hours.}.
+It is worth noting that we did not fully exploit the parallel capacity of the cluster, and modifications such as parallelising upon each compute node, or pipelining, would yield vastly improved execution times.  In part this was a response to the limitations of the HEC's design, particularly disk access rate and the simplicity of the scheduling system.
 Though these incur further development effort, they may be worthwhile for many projects, or be used to extend the lifespan of existing toolchains.
 
 In contrast to manual deployment, there is a benefit to having smaller jobs where scheduling is automated and fast, as they may compete more efficiently for resources (though this must be balanced with the overheads of any scheduling itself).

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SCRIBUSUTF8NEW Version="1.4.3">
-    <DOCUMENT ANZPAGES="1" PAGEWIDTH="2383.93700787402" PAGEHEIGHT="3370.3937007874" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" PRESET="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" ORIENTATION="0" PAGESIZE="Custom" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="0.3881" UNITS="1" DFONT="Arial Regular" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="5" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="sRGB IEC61966-2.1" DPPr="Fogra27L CMYK Coated Press" DPIn="sRGB IEC61966-2.1" DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="sRGB IEC61966-2.1" DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="2" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="0" SnapToGuides="1" SnapToGrid="1" MINGRID="20.0012598425197" MAJGRID="100.00062992126" SHOWGRID="1" SHOWGUIDES="1" showcolborders="0" SHOWFRAME="1" SHOWLAYERM="0" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.707106781186548" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20.0012598425197" ScratchLeft="100.00062992126" ScratchRight="100.00062992126" ScratchTop="20.0012598425197" GapHorizontal="0" GapVertical="39.9996850393701" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="0.124" dispY="0.124" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="1" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
+    <DOCUMENT ANZPAGES="1" PAGEWIDTH="2383.93700787402" PAGEHEIGHT="3370.3937007874" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" PRESET="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" ORIENTATION="0" PAGESIZE="Custom" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="0.3881" UNITS="1" DFONT="Arial Regular" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="5" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="sRGB IEC61966-2.1" DPPr="Fogra27L CMYK Coated Press" DPIn="sRGB IEC61966-2.1" DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="sRGB IEC61966-2.1" DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="1" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="0" SnapToGuides="1" SnapToGrid="1" MINGRID="20.0012598425197" MAJGRID="100.00062992126" SHOWGRID="1" SHOWGUIDES="1" showcolborders="0" SHOWFRAME="1" SHOWLAYERM="0" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.707106781186548" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20.0012598425197" ScratchLeft="100.00062992126" ScratchRight="100.00062992126" ScratchTop="20.0012598425197" GapHorizontal="0" GapVertical="39.9996850393701" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="0.124" dispY="0.124" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="1" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
         <CheckProfile Name="PDF 1.3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
         <CheckProfile Name="PDF 1.4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
         <CheckProfile Name="PDF 1.5" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
@@ -48,7 +48,7 @@
         </STYLE>
         <CHARSTYLE CNAME="Default Character Style" FONT="Arial Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <CHARSTYLE CNAME="Citation Marker" FONT="Georgia Regular" FONTSIZE="24" FEATURES="superscript" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="English"/>
-        <LAYERS NUMMER="0" LEVEL="0" NAME="Background" SICHTBAR="0" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
+        <LAYERS NUMMER="0" LEVEL="0" NAME="Background" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
         <LAYERS NUMMER="1" LEVEL="1" NAME="Layout features" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ff0000"/>
         <LAYERS NUMMER="2" LEVEL="2" NAME="Content" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ff00"/>
         <Printer firstUse="1" toFile="1" useAltPrintCommand="1" outputSeparations="1" useSpotColors="0" useColor="0" mirrorH="0" mirrorV="0" useICC="1" doGCR="1" doClip="1" setDevParam="1" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="1" includePDFMarks="1" PSLevel="3" PDLanguage="3" markOffset="1.9852427205438e-316" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="" printerCommand=""/>
@@ -89,6 +89,20 @@
         <PAGE PAGEXPOS="100.00062992126" PAGEYPOS="20.0012598425197" PAGEWIDTH="2383.93700787402" PAGEHEIGHT="3370.3937007874" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="" MNAM="Normal" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="2409.45 2242.2 141.732 1162.2 1221.73 0 1196 " HorizontalGuides="4138.58 3968.5 141.732 425.197 3228.66 1685.26 3038.74 " AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0"/>
         <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="241.732913385827" YPOS="2300.14488188977" WIDTH="1020.47244094488" HEIGHT="779.742336155344" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 779.742 1020.47 779.742 1020.47 779.742 1020.47 779.742 0 779.742 0 779.742 0 779.742 0 779.742 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 779.742 1020.47 779.742 1020.47 779.742 1020.47 779.742 0 779.742 0 779.742 0 779.742 0 779.742 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" ALIGN="0" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <ITEXT CH="The Wmatrix tag wizard toolchain was originally designed and developed to run on commodity computing hardware in a batch processing fashion. The toolchain thus respects a number of common limits that apply to desktop computers (e.g. low memory limits) and attempts to exploit other resources that are available in abundance (fast sequential file I/O). Many of these properties do not transfer to larger clusters, and a number of changes had to be made in order to align the processing stages with the resources available on the HEC system."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
             <trail PARENT="Drop cap paragraph"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -134,7 +148,7 @@
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1332.11905511811" YPOS="3080.19401574803" WIDTH="507.832440944882" HEIGHT="170.078740157481" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LINESP="116" LINESPMode="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="Georgia Regular" ISIZE="24" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="28.3464566929134" BEXTRA="28.3464566929134" REXTRA="28.3464566929134" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 507.832 0 507.832 0 507.832 0 507.832 0 507.832 170.079 507.832 170.079 507.832 170.079 507.832 170.079 0 170.079 0 170.079 0 170.079 0 170.079 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 507.832 0 507.832 0 507.832 0 507.832 0 507.832 170.079 507.832 170.079 507.832 170.079 507.832 170.079 0 170.079 0 170.079 0 170.079 0 170.079 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" ALIGN="2" LAYER="1" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT FONT="Georgia Regular" FONTSIZE="24" CH="†Dept. of English Language,"/>
+            <ITEXT FONT="Georgia Regular" FONTSIZE="24" CH="*Dept. of English Language,"/>
             <para ALIGN="2" LINESPMode="1" LINESP="116"/>
             <ITEXT CH="University of Glasgow,"/>
             <para/>
@@ -154,7 +168,7 @@
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1840.1102362685" YPOS="3080.19401574803" WIDTH="500.031496014961" HEIGHT="170.0787402" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LINESP="116" LINESPMode="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="Georgia Regular" ISIZE="24" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="28.3464566929134" BEXTRA="28.3464566929134" REXTRA="28.3464566929134" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 500.031 0 500.031 0 500.031 0 500.031 0 500.031 170.079 500.031 170.079 500.031 170.079 500.031 170.079 0 170.079 0 170.079 0 170.079 0 170.079 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 500.031 0 500.031 0 500.031 0 500.031 0 500.031 170.079 500.031 170.079 500.031 170.079 500.031 170.079 0 170.079 0 170.079 0 170.079 0 170.079 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" ALIGN="2" LAYER="1" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT FONT="Georgia Regular" FONTSIZE="24" CH="*School of Computing &amp; Communications,"/>
+            <ITEXT FONT="Georgia Regular" FONTSIZE="24" CH="†School of Computing &amp; Communications,"/>
             <para ALIGN="2" LINESPMode="1" LINESP="116"/>
             <ITEXT CH="Lancaster University,"/>
             <para/>
@@ -164,12 +178,14 @@
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1321.73291338583" YPOS="2960.18645669292" WIDTH="1018.40881889764" HEIGHT="80.0050393700823" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1018.41 0 1018.41 0 1018.41 0 1018.41 0 1018.41 80.005 1018.41 80.005 1018.41 80.005 1018.41 80.005 0 80.005 0 80.005 0 80.005 0 80.005 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1018.41 0 1018.41 0 1018.41 0 1018.41 0 1018.41 80.005 1018.41 80.005 1018.41 80.005 1018.41 80.005 0 80.005 0 80.005 0 80.005 0 80.005 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT CH="1. WMatrix (URL), 2."/>
-            <tab/>
-            <tab/>
-            <ITEXT CH="CLAWS. 3. USAS"/>
-            <trail/>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1321.73291338583" YPOS="2920.18393700788" WIDTH="1018.40881889764" HEIGHT="120.007559055126" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LINESP="24" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" ISIZE="19" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.3464566929134" TEXTRA="11.3385826771654" BEXTRA="11.3385826771654" REXTRA="28.3464566929134" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1018.41 0 1018.41 0 1018.41 0 1018.41 0 1018.41 120.008 1018.41 120.008 1018.41 120.008 1018.41 120.008 0 120.008 0 120.008 0 120.008 0 120.008 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1018.41 0 1018.41 0 1018.41 0 1018.41 0 1018.41 120.008 1018.41 120.008 1018.41 120.008 1018.41 120.008 0 120.008 0 120.008 0 120.008 0 120.008 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <para LINESP="24"/>
+            <ITEXT CH="Tagged for the Parliamentary Discourse project at the University of Glasgow: "/>
+            <ITEXT FONTSIZE="19" CH="http://parldisc.jiscinvolve.org/wp/"/>
+            <para ALIGN="0" LINESP="24"/>
+            <para ALIGN="0" LINESP="24"/>
+            <ITEXT CH="Toolchain elements include CLAWS (http://ucrel.lancs.ac.uk/claws/) and USAS (http://ucrel.lancs.ac.uk/usas/), and form much of the WMatrix corpus analysis and comparison tool (http://ucrel.lancs.ac.uk/wmatrix/)"/>
+            <trail ALIGN="0" LINESP="24"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="234.166929133858" YPOS="1294.49755905512" WIDTH="1036.54236220472" HEIGHT="181.011338582678" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="0" PCOLOR="None" PCOLOR2="Black" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="Group10" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="1" groupsLastItem="6" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1036.54 0 1036.54 0 1036.54 0 1036.54 0 1036.54 181.011 1036.54 181.011 1036.54 181.011 1036.54 181.011 0 181.011 0 181.011 0 181.011 0 181.011 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1036.54 0 1036.54 0 1036.54 0 1036.54 0 1036.54 181.011 1036.54 181.011 1036.54 181.011 1036.54 181.011 0 181.011 0 181.011 0 181.011 0 181.011 0 0 0 0 " NUMGROUP="1" GROUPS="1 " startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
@@ -203,9 +219,11 @@
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="241.732913385827" YPOS="3080.19401574803" WIDTH="1034.64566929134" HEIGHT="170.078740157481" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="Georgia Regular" ISIZE="24" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1034.65 0 1034.65 0 1034.65 0 1034.65 0 1034.65 170.079 1034.65 170.079 1034.65 170.079 1034.65 170.079 0 170.079 0 170.079 0 170.079 0 170.079 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1034.65 0 1034.65 0 1034.65 0 1034.65 0 1034.65 170.079 1034.65 170.079 1034.65 170.079 1034.65 170.079 0 170.079 0 170.079 0 170.079 0 170.079 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="1" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT FONT="Georgia Regular" FONTSIZE="24" CH="With thanks to Mike Pacey, HPC Manager, Information Systems Services, Lancaster University for his assistance with this project.  Central quote is from the SPARCStation LX service manual, the same model upon which CLAWS was developed. "/>
-            <trail LINESP="33"/>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="241.732913385827" YPOS="3080.19401574803" WIDTH="658.318110236221" HEIGHT="168.46724409449" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LINESP="24" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="Georgia Regular" ISIZE="21" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 658.318 0 658.318 0 658.318 0 658.318 0 658.318 168.467 658.318 168.467 658.318 168.467 658.318 168.467 0 168.467 0 168.467 0 168.467 0 168.467 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 658.318 0 658.318 0 658.318 0 658.318 0 658.318 168.467 658.318 168.467 658.318 168.467 658.318 168.467 0 168.467 0 168.467 0 168.467 0 168.467 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="1" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Georgia Regular" FONTSIZE="21" CH="With thanks to Mike Pacey, HPC Manager, Information Systems Services, Lancaster University for his assistance with this project.  Central quote is from the SPARCStation LX service manual, the same model upon which CLAWS was developed."/>
+            <para LINESP="24"/>
+            <ITEXT FONT="Georgia Regular" FONTSIZE="21" CH=" "/>
+            <trail LINESP="24"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="241.732913385827" YPOS="760.047874015748" WIDTH="1020.47244094488" HEIGHT="560.035275590551" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 560.035 1020.47 560.035 1020.47 560.035 1020.47 560.035 0 560.035 0 560.035 0 560.035 0 560.035 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 560.035 1020.47 560.035 1020.47 560.035 1020.47 560.035 0 560.035 0 560.035 0 560.035 0 560.035 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
@@ -213,25 +231,106 @@
             <para PARENT="Drop cap paragraph"/>
             <tab/>
             <ITEXT CH="The Hansard corpus is one of the biggest humanities data sets in the UK but was limited in its use by being tagged only by speaker and date. To provide greater utility we wanted the speeches to be searchable by parts of speech (POS) and by topic.   Historic records back to 1803 have been digitized in XML format and are publically available on the Historic Hansard web site created by the Commons and Lords Libraries and Millbank Systems. There one can search by word or phrase then filter results by speaker or House (Lords or Commons)."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
             <para PARENT="Content paragraph"/>
             <tab/>
             <ITEXT CH="The full 200-year collection is 2,271,985,142 words and 32.7GiB of data, including mark-up. The corpus is split into 7,545,103 XML files, each representing one speech, with a median size of 147 words."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
             <trail PARENT="Content paragraph"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1321.73062992126" YPOS="2260.14236220473" WIDTH="1020.47244094488" HEIGHT="620.039055118107" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 620.039 1020.47 620.039 1020.47 620.039 1020.47 620.039 0 620.039 0 620.039 0 620.039 0 620.039 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 620.039 1020.47 620.039 1020.47 620.039 1020.47 620.039 0 620.039 0 620.039 0 620.039 0 620.039 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1321.73062992126" YPOS="2260.14236220473" WIDTH="1020.47244094488" HEIGHT="580.036535433067" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 580.037 1020.47 580.037 1020.47 580.037 1020.47 580.037 0 580.037 0 580.037 0 580.037 0 580.037 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1020.47 0 1020.47 0 1020.47 0 1020.47 0 1020.47 580.037 1020.47 580.037 1020.47 580.037 1020.47 580.037 0 580.037 0 580.037 0 580.037 0 580.037 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <ITEXT CH="In many cases, the alternative to deployment on a HEC cluster will be use of one or many commodity desktop machines.  The desktop system  (i5, RAID0) runs individual jobs significantly more quickly.  Fitting a linear model indicates that the desktop is able to run jobs approximately 2.1 times faster than a single HEC core.  The same model indicates a 100 second job startup overhead on the HEC (including copying of files)."/>
             <para PARENT="Content paragraph"/>
             <tab/>
             <ITEXT CH="Two weeks was spent developing and testing the HEC deployment of the toolchain.  Of this, a significant portion was spent adapting the toolchain to run on the scheduler without restriction from the shared filesystem."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
             <para/>
             <tab/>
             <ITEXT CH="The problem is embarrassingly parallel, and the design of many HEC facilities is well suited to exploit that.  It is certainly the case that, even if we had manually split the data and run it on (faster) commodity hardware, we would still have incurred significant overhead in doing so."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
             <para/>
             <tab/>
-            <ITEXT CH="For problems where time constraints are less severe, the toolchain used is particularly specialised, or the data is less inherently parallel, there may be benefits to the simpler approach.  For our purposes, where "/>
-            <para/>
-            <ITEXT CH="the toolchain was easily ported, and the timescale short, the greater concurrency offered by a high performance cluster proved invaluable.  "/>
+            <ITEXT CH="For problems where time constraints are less severe, the toolchain used is particularly specialised, or the data is less inherently parallel, there may be benefits to the simpler approach. For our purposes, where  the toolchain was easily ported, and the timescale short, the greater concurrency offered by a high performance cluster proved invaluable."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="  "/>
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -241,6 +340,14 @@
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1321.73291338583" YPOS="1400.08818897638" WIDTH="1020.59644053543" HEIGHT="305.173070866141" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="28.34645669" BEXTRA="28.34645669" REXTRA="28.34645669" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1020.6 0 1020.6 0 1020.6 0 1020.6 0 1020.6 305.173 1020.6 305.173 1020.6 305.173 1020.6 305.173 0 305.173 0 305.173 0 305.173 0 305.173 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1020.6 0 1020.6 0 1020.6 0 1020.6 0 1020.6 305.173 1020.6 305.173 1020.6 305.173 1020.6 305.173 0 305.173 0 305.173 0 305.173 0 305.173 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" PSTYLE="Content paragraph" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <ITEXT CH="All jobs were complete in 3 days, meaning that the system tagged at a rate of 31.5 million words per hour.  Because of the heterogeniety in task length, this rate was not constant, decaying towards the end (the final 231) as the queued tasks ran out and were not replaced.  Had we used larger batches, this effect would have proven more severe as the variance in job length was liable to increase.  Were the corpus particularly large (in the range of hundreds of billions of words), it would be wise to model and control for this effect ahead of time."/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
             <trail PARENT="Content paragraph"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -273,8 +380,8 @@
             <CSTOP RAMP="1" NAME="1st Split (subtle)" SHADE="100" TRANS="1"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1323.23291338583" YPOS="2884.10456671652" WIDTH="1016.90881853543" HEIGHT="78.50503937" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="2nd. Split" PCOLOR2="Black" COLUMNS="1" COLGAP="0" NAMEDLST="Thicker" SHADE="100" SHADE2="100" GRTYP="3" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="22.67716535" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1016.91 0 1016.91 0 1016.91 0 1016.91 0 1016.91 78.505 1016.91 78.505 1016.91 78.505 1016.91 78.505 0 78.505 0 78.505 0 78.505 0 78.505 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1016.91 0 1016.91 0 1016.91 0 1016.91 0 1016.91 78.505 1016.91 78.505 1016.91 78.505 1016.91 78.505 0 78.505 0 78.505 0 78.505 0 78.505 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" GRSTARTX="0" GRSTARTY="0" GRENDX="1016.90881853543" GRENDY="78.50503937" PSTYLE="Header" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT CH="References"/>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="1323.23291338583" YPOS="2838.75023600786" WIDTH="1016.90881853543" HEIGHT="78.50503937" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="2nd. Split" PCOLOR2="Black" COLUMNS="1" COLGAP="0" NAMEDLST="Thicker" SHADE="100" SHADE2="100" GRTYP="3" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="28.34645669" TEXTRA="22.67716535" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 1016.91 0 1016.91 0 1016.91 0 1016.91 0 1016.91 78.505 1016.91 78.505 1016.91 78.505 1016.91 78.505 0 78.505 0 78.505 0 78.505 0 78.505 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 1016.91 0 1016.91 0 1016.91 0 1016.91 0 1016.91 78.505 1016.91 78.505 1016.91 78.505 1016.91 78.505 0 78.505 0 78.505 0 78.505 0 78.505 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" GRSTARTX="0" GRSTARTY="0" GRENDX="1016.90881853543" GRENDY="78.50503937" PSTYLE="Header" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT CH="Further Information"/>
             <trail PARENT="Header"/>
             <CSTOP RAMP="0" NAME="2nd. Split" SHADE="100" TRANS="1"/>
             <CSTOP RAMP="1" NAME="1st Split (subtle)" SHADE="100" TRANS="1"/>
@@ -378,7 +485,7 @@
             <tab/>
             <ITEXT CH="5."/>
             <tab/>
-            <ITEXT CH="Degree of Parallelism—Each compute node on the HEC is furnished with 8-12 processor cores.  Wmatrix itself does not take advantage of this parallelism"/>
+            <ITEXT CH="Degree of Parallelism—Each compute node on the HEC is furnished with 8-12 processor cores.  The toolchain itself does not take advantage of this parallelism."/>
             <trail PARENT="List" ALIGN="0"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -387,6 +494,14 @@
             <trail PARENT="Header"/>
             <CSTOP RAMP="0" NAME="2nd. Split" SHADE="100" TRANS="1"/>
             <CSTOP RAMP="1" NAME="1st Split (subtle)" SHADE="100" TRANS="1"/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="2" XPOS="1168.05417320472" YPOS="3101.53511851968" WIDTH="198.01259844882" HEIGHT="130.006298803152" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="0.947428700712057" LOCALSCY="0.947428700712057" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="0" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="images/ucrel-logo.eps" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="0" EMBEDDED="0" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 198.013 0 198.013 0 198.013 0 198.013 0 198.013 130.006 198.013 130.006 198.013 130.006 198.013 130.006 0 130.006 0 130.006 0 130.006 0 130.006 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 198.013 0 198.013 0 198.013 0 198.013 0 198.013 130.006 198.013 130.006 198.013 130.006 198.013 130.006 0 130.006 0 130.006 0 130.006 0 130.006 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="1" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="2" XPOS="1037.38393700787" YPOS="3083.02866141733" WIDTH="108.827716535433" HEIGHT="168.467244094486" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1.71905351116822" LOCALSCY="1.71905351116822" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="0" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="images/bg-logo.eps" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="0" EMBEDDED="0" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 108.828 0 108.828 0 108.828 0 108.828 0 108.828 168.467 108.828 168.467 108.828 168.467 108.828 168.467 0 168.467 0 168.467 0 168.467 0 168.467 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 108.828 0 108.828 0 108.828 0 108.828 0 108.828 168.467 108.828 168.467 108.828 168.467 108.828 168.467 0 168.467 0 168.467 0 168.467 0 168.467 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="1" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
     </DOCUMENT>
